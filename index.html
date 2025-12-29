@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Arithmetic Operation</title>
+    <title>Arithmetic Operation</title>
 </head>
 <body>
     <script>
-        let num1= Number(prompt("Enter first number: "))
-        let num2= Number(prompt("Enter second number: "))
-        let sum=num1+num2;
-        let sub=num1-num2;
-        let mul=num1*num2;
-        let div=num1/num2;
-        alert(`sum of ${sum}`)
-        alert(`substraction of ${sub}`)
-        alert(`multiplication of ${mul}`)
-        alert(`Division of ${div}`)
+        let num1 = parseFloat(prompt("Enter a First Number"));
+        while (Number.isNaN(num1)) {
+            num1 = parseFloat(prompt("Invalid No,Please Enter a Valid number"));
+        }
+        let num2 = parseFloat(prompt("Enter a Second Number"));
+        while (Number.isNaN(num2)) {
+            num2 = parseFloat(prompt("Invalid No,Please Enter a Valid number"));
+        }
+        alert(num1 + num2)
     </script>
 </body>
-
 </html>
